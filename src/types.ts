@@ -40,6 +40,7 @@ export type TabBarProps<T extends TabName = TabName> = {
   containerRef: React.RefObject<ContainerRef>
   onTabPress: (name: T) => void
   tabProps: TabsWithProps<T>
+  tabBarStyle?: StyleProp<ViewStyle>
 
   /**
    * Custom width of the tabbar. Defaults to the window width.
@@ -55,7 +56,7 @@ export type IndexChangeEventData<T extends TabName = TabName> = {
 }
 
 export type OnTabChangeCallback<T extends TabName = TabName> = (
-  data: IndexChangeEventData<T>
+  data?: IndexChangeEventData<T>
 ) => void
 
 export type TabReactElement<T extends TabName = TabName> = React.ReactElement<
@@ -128,6 +129,11 @@ export type CollapsibleProps = {
    * @default false
    */
   allowHeaderOverscroll?: boolean
+  
+  /*
+   * Custom style required for continuum's app
+   */
+  tabBarStyle?: StyleProp<ViewStyle>
 }
 
 export type ContextType<T extends TabName = TabName> = {

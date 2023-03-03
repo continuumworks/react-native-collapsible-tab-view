@@ -82,6 +82,11 @@ export type MaterialTabBarProps<N extends TabName> = TabBarProps<N> & {
    * Whether to keep the currently active tab centered in a scrollable tab bar
    */
   keepActiveTabCentered?: boolean
+
+  /* 
+   * Custom style required on continuum's app
+   */
+  tabBarStyle: StyleProp<ViewStyle>
 }
 
 export type ItemLayout = {
